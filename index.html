@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartLibrary | Smart Library System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h3>Smart<span>Library</span></h3>
+        </div>
+        <ul class="nav-menu">
+            <li class="active"><a href="#">Dashboard</a></li>
+            <li><a href="#">All Books</a></li>
+            <li><a href="#">Issued Books</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Members</a></li>
+            <li><a href="#">Fine History</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <p>Welcome, Admin</p>
+            <a href="#" class="logout-btn">Logout</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        
+        <header class="top-bar">
+            <div class="search-box">
+                <input type="text" placeholder="Search by Book Title, Author, or ISBN...">
+                <button>Search</button>
+            </div>
+            <div class="user-profile">
+                <img src="https://ui-avatars.com/api/?name=Admin+User" alt="User">
+            </div>
+        </header>
+
+        <section class="stats-container">
+            <div class="stat-card">
+                <div class="stat-info">
+                    <h3>1,250</h3>
+                    <p>Total Books</p>
+                </div>
+                <div class="stat-icon icon-1">📚</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-info">
+                    <h3>450</h3>
+                    <p>Issued Books</p>
+                </div>
+                <div class="stat-icon icon-2">📖</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-info">
+                    <h3>85</h3>
+                    <p>New Members</p>
+                </div>
+                <div class="stat-icon icon-3">👥</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-info">
+                    <h3>₹1,200</h3>
+                    <p>Pending Fines</p>
+                </div>
+                <div class="stat-icon icon-4">💰</div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="section-header">
+                <h2>Recently Added Books</h2>
+                <button class="add-btn">+ Add New Book</button>
+            </div>
+
+            <div class="book-grid">
+                <div class="book-card">
+                    <div class="book-badge available">Available</div>
+                    <img src="https://covers.openlibrary.org/b/id/8225266-L.jpg" alt="Book">
+                    <div class="book-details">
+                        <h4>The Great Gatsby</h4>
+                        <p>F. Scott Fitzgerald</p>
+                        <span class="category">Fiction</span>
+                        <div class="card-footer">
+                            <button class="btn-issue">Issue</button>
+                            <button class="btn-view">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card">
+                    <div class="book-badge issued">Issued</div>
+                    <img src="https://covers.openlibrary.org/b/id/12643501-L.jpg" alt="Book">
+                    <div class="book-details">
+                        <h4>Atomic Habits</h4>
+                        <p>James Clear</p>
+                        <span class="category">Self-Help</span>
+                        <div class="card-footer">
+                            <button class="btn-issue disabled" disabled>Issue</button>
+                            <button class="btn-view">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card">
+                    <div class="book-badge available">Available</div>
+                    <img src="https://covers.openlibrary.org/b/id/7222246-L.jpg" alt="Book">
+                    <div class="book-details">
+                        <h4>To Kill a Mockingbird</h4>
+                        <p>Harper Lee</p>
+                        <span class="category">Classic</span>
+                        <div class="card-footer">
+                            <button class="btn-issue">Issue</button>
+                            <button class="btn-view">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card">
+                    <div class="book-badge available">Available</div>
+                    <img src="https://covers.openlibrary.org/b/id/11145101-L.jpg" alt="Book">
+                    <div class="book-details">
+                        <h4>Deep Work</h4>
+                        <p>Cal Newport</p>
+                        <span class="category">Productivity</span>
+                        <div class="card-footer">
+                            <button class="btn-issue">Issue</button>
+                            <button class="btn-view">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="table-section">
+            <h2>Recent Transactions</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Member ID</th>
+                        <th>Book Title</th>
+                        <th>Issue Date</th>
+                        <th>Due Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#STU101</td>
+                        <td>The Great Gatsby</td>
+                        <td>20-Oct-2023</td>
+                        <td>30-Oct-2023</td>
+                        <td><span class="status-ok">Returned</span></td>
+                    </tr>
+                    <tr class="active-row">
+                        <td>#STU105</td>
+                        <td>Atomic Habits</td>
+                        <td>22-Oct-2023</td>
+                        <td>01-Nov-2023</td>
+                        <td><span class="status-pending">Pending</span></td>
+                    </tr>
+                    <tr>
+                        <td>#STU110</td>
+                        <td>Deep Work</td>
+                        <td>24-Oct-2023</td>
+                        <td>03-Nov-2023</td>
+                        <td><span class="status-pending">Pending</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+</body>
+</html>
